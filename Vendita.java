@@ -17,4 +17,16 @@ Crea un'interfaccia utente semplice in console per interagire con l'utente, perm
 
 public class Vendita {
     
+    public static int idProgeressivo = 1;
+    public String vendita= "";
+    int id;
+    Giocattolo g;
+    Cliente p;
+
+    public Vendita(Giocattolo g, Cliente p){
+        this.g = g;
+        this.p = p;
+        idProgeressivo++;
+    }
+
 }
