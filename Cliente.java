@@ -19,8 +19,8 @@ Crea un'interfaccia utente semplice in console per interagire con l'utente, perm
 public class Cliente {
     int idIncrementato = 1;
     int id;
-    String nome;
-    String mail;
+    private String nome;
+    private String mail;
 
     public Cliente(String nome, String mail){
         if(!(nome.equals("")) && !(mail.equals(""))){
@@ -54,4 +54,9 @@ public class Cliente {
         this.mail = mail;
     }
     
+
+    @Override
+    public String toString(){
+        return nome + " " + mail + " " + id;
+    }
 }

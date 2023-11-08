@@ -29,4 +29,9 @@ public class Vendita {
         idProgeressivo++;
     }
 
+    @Override
+    public String toString(){
+        return idProgeressivo + " vendita: " + p + " ha comprato " + g;
+    }
+
 }

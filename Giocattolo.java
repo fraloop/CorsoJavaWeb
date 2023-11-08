@@ -18,6 +18,7 @@ Crea un'interfaccia utente semplice in console per interagire con l'utente, perm
 public class Giocattolo{
 
     static Integer idProgressivo = 1;
+    int id;
     private static String codiceGiocattolo = "";
     String nome;
     private int prezzo;
@@ -29,7 +30,7 @@ public class Giocattolo{
             this.prezzo = prezzo;
             this.etàConsigliata = etàConsigliata;
             codiceGiocattolo += nome + "_PROD_" + idProgressivo.toString();
-            idProgressivo++;
+            id = idProgressivo++;
         }
     }
 
@@ -67,8 +68,11 @@ public class Giocattolo{
         this.etàConsigliata = etàConsigliata;
     }
 
+    public int getId(){
+        return id;
+    }
     @Override
     public String toString(){
-        return nome + " costa " + prezzo + " e l'età consigliata è: " + etàConsigliata;
+        return "\t " + nome.toUpperCase() + " € " + prezzo + "\n \t età consigliata è: " + etàConsigliata + " (id: " + id + ") \n";
     }
 }

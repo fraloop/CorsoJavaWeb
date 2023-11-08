@@ -21,6 +21,8 @@ import java.util.ArrayList;
 public class Inventario {
     
     ArrayList <Giocattolo> listaGiocattoli = new ArrayList<Giocattolo>();
+    String mailAdmin = "admin";
+    String nomeAdmin = "admin";
 
     
 
